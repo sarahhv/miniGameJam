@@ -48,7 +48,7 @@ function draw() {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.beginPath();
-  ctx.arc(arcXcY, r,2 * Math.PI);
+  ctx.arc(arcX, arcY, r, 0, 2 * Math.PI);
   ctx.stroke();
   ctx.fillStyle = "red";
   ctx.fill();

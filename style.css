@@ -47,6 +47,8 @@ div.key > span
 h1{
 text-align: center;
 color: red;
+font-family: 'Boogaloo', cursive;
+font-size: 40px;
 }
 
 
@@ -54,6 +56,7 @@ h2{
 text-decoration: underline;
 margin-left: 50px;
 color: red;
+font-family: 'Boogaloo', cursive;
 }
 
 div.key2
@@ -87,7 +90,7 @@ div.key2 > span
 
 #players
 {
-margin: -145px 50px 0;
+margin: -200px 50px 0;
 }
 
 #player1
@@ -108,5 +111,6 @@ font-size: 20px;
     margin-right:50px;
 float: right;
 color: red;
+font-family: 'Boogaloo', cursive;
 }
 
