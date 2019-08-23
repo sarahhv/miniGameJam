@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- LOADING -->
+   <div class="loader">
+        <div class="content">
+            <div class="load-pic">
+                <img src="astronaut.gif">
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+            <div style="position: relative">
+                    <p>
+                            <span class="ef">FLAT</span><br> <span class="ef">EARTH</span><span class="ef"></span>                 
+                    </p>
+                    </div>
+<input type="button" id="play" class="play-button" onclick="location.href='index.html'" value="PLAY" />
+</div>
+  <!-- START SCREEN LOADING -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+    setTimeout(function(){
+      document.querySelector('.loader').className += " loaded";
+      setTimeout(function(){
+        document.querySelector('.loader').remove();
+      }, 300);
+    }, 3000);
+
+
+    $(function(){
+
+$('body').on('click', '#play', function(e)
+{
+    e.preventDefault();
+
+    var link = $(this).attr('href');
+    
+    $('body').append(
+        '<div class="loader">' +
+        '<div class="content">' +
+        '<div class="load-pic">' +
+        '<img id="loading" src="astronaut.gif">' +
+        '</div>'
+    );
+    
+    setTimeout(function(){
+      $('#overlay').remove();
+      window.open( link );
+    }, 2000); //2 seconds
+});
+
+})
+
+$("document").ready(function(){
+  $('p').addClass('animated rollIn');
+});
+  </script>
+</body>
+</html>

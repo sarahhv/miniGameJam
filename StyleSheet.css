@@ -1,0 +1,73 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url(space.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+p {
+    text-transform: uppercase;
+    position: absolute;
+    top:100px;
+    width:100%;
+    text-align: center;
+    font-size:100px;
+    font-family: 'Boogaloo', cursive;
+    letter-spacing: 5px;
+  }
+  p span {
+    background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+    -webkit-background-clip: text;
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px tomato;
+    font-weight: bolder;
+    -webkit-animation: aitf 65s linear infinite;
+  }
+  
+  /* Animate Background Image */
+  @-webkit-keyframes aitf {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+.play-button {
+  
+    margin-top:500px;
+    background-color:#44c767;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:3px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	padding:18px 43px;
+	text-decoration:none;
+	text-shadow:-1px -1px 3px #2f6627;
+    }
+
+    .play-button:hover {
+        background-color:#5cbf2a;
+    }
+    .play-button:active {
+        position:relative;
+        top:1px;
+    }
+
+    
+    
+            

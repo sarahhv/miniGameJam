@@ -1,13 +1,112 @@
 body {
-    user-select: none
+    user-select: none;
+    background: url(space.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
 }
 
 canvas {
     border: 1px solid #d3d3d3;
-    background-color: #f1f1f1;
     background-image: url(map.png);
     background-position: center;
     background-size: cover;
-    /* border-radius: 50%; */
+    margin: 0% 34%;
+    border: none;
+}
+
+div.key
+{
+	width:35px;
+	height: 37px;
+	padding: 1px;
+	margin: 10px;
+    display: inline-block;
+}
+div.key > span
+{
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: 1px solid #a9a9a9;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	font-size: 20px;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	text-align: center;
+	padding-top: 6px;
+	color: red;
+	
+}
+
+
+h1{
+text-align: center;
+color: red;
+}
+
+
+h2{
+text-decoration: underline;
+margin-left: 50px;
+color: red;
+}
+
+div.key2
+{
+	width:35px;
+	height: 37px;
+	padding: 1px;
+	margin: 10px;
+    margin-left: 70px;
+}
+div.key2 > span
+{
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: 1px solid #a9a9a9;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	font-size: 20px;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	text-align: center;
+	padding-top: 6px;
+	color: red;
+	
+}
+
+
+
+#players
+{
+margin: -145px 50px 0;
+}
+
+#player1
+{
+float: left; 
+    margin-right: 500px;
+}
+
+#player2
+{
+float: right;
+    margin-right: 20px;
+}
+
+
+p {
+font-size: 20px;
+    margin-right:50px;
+float: right;
+color: red;
 }
 

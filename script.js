@@ -48,9 +48,9 @@ function draw() {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.beginPath();
-  ctx.arc(arcX, arcY, r, 0, 2 * Math.PI);
+  ctx.arc(arcXcY, r,2 * Math.PI);
   ctx.stroke();
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "red";
   ctx.fill();
   
   let x = lineX - arcX, 
@@ -65,9 +65,9 @@ function draw() {
   ctx.fillRect(this.x, this.y, 5, 5)
   ctx.moveTo(arcX+x, arcY+y);
   ctx.lineTo(arcX+x*2, arcY+y*2);
-  ctx.strokeStyle = "green";
+  ctx.strokeStyle = "red";
   ctx.stroke();
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "red";
   ctx.fill();
 
   bullets.forEach(b => {
