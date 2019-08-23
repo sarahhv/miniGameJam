@@ -1,5 +1,5 @@
-var ctx = canvas.getContext("2d"),
-    arcX = 70,
+var ctxTwo = canvas.getContext("2d"),
+    arcX = 140,
     arcY = 200,
     lineX = 0,
     lineY = 0,
@@ -8,7 +8,7 @@ var ctx = canvas.getContext("2d"),
     bullets = [];
 
 // Keycodes
-var vector = [
+var vectorTwo = [
     [
         [0, -1], 87
     ],
@@ -28,9 +28,9 @@ var vector = [
     active: -1
 }))
 
-let keyHandler = (e, active) => vector.forEach(v => v.keyCode === e.keyCode && (v.active = active))
-document.addEventListener('keydown', e => keyHandler(e, 1))
-document.addEventListener('keyup', e => keyHandler(e, -1))
+let keyHandlerTwo = (e, active) => vectorTwo.forEach(v => v.keyCode === e.keyCode && (v.active = active))
+document.addEventListener('keydown', e => keyHandlerTwo(e, 1))
+document.addEventListener('keyup', e => keyHandlerTwo(e, -1))
 canvas.addEventListener('mousemove', e => {
     lineX = e.layerX;
     lineY = e.layerY;
@@ -49,17 +49,17 @@ canvas.addEventListener('click', e => {
     });
 })
 
-draw();
-setInterval(tick, 10);
+drawTwo();
+setInterval(tickTwo, 10);
 
-function draw() {
+function drawTwo() {
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(arcX, arcY, r, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.fillStyle = "red";
-    ctx.fill();
+    ctxTwo.clearRect(0, 0, canvas.width, canvas.height);
+    ctxTwo.beginPath();
+    ctxTwo.arc(arcX, arcY, r, 0, 2 * Math.PI);
+    ctxTwo.stroke();
+    ctxTwo.fillStyle = "red";
+    ctxTwo.fill();
 
     let x = lineX - arcX,
         y = lineY - arcY,
@@ -69,28 +69,28 @@ function draw() {
 
 
     // Shooting barrel
-    ctx.beginPath();
-    ctx.fillRect(this.x, this.y, 5, 5)
-    ctx.moveTo(arcX + x, arcY + y);
-    ctx.lineTo(arcX + x * 2, arcY + y * 2);
-    ctx.strokeStyle = "red";
-    ctx.stroke();
-    ctx.fillStyle = "red";
-    ctx.fill();
+    ctxTwo.beginPath();
+    ctxTwo.fillRect(this.x, this.y, 5, 5)
+    ctxTwo.moveTo(arcX + x, arcY + y);
+    ctxTwo.lineTo(arcX + x * 2, arcY + y * 2);
+    ctxTwo.strokeStyle = "red";
+    ctxTwo.stroke();
+    ctxTwo.fillStyle = "red";
+    ctxTwo.fill();
 
     bullets.forEach(b => {
-        ctx.beginPath();
-        ctx.arc(b.pos[0], b.pos[1], br + b.explode, 0, 2 * Math.PI);
-        b.explode ? ctx.fill() : ctx.stroke();
+        ctxTwo.beginPath();
+        ctxTwo.arc(b.pos[0], b.pos[1], br + b.explode, 0, 2 * Math.PI);
+        b.explode ? ctxTwo.fill() : ctxTwo.stroke();
     })
 
     count.textContent = bullets.length
-    requestAnimationFrame(draw)
+    requestAnimationFrame(drawTwo)
 }
 
-function tick() {
+function tickTwo() {
 
-    vector.forEach(v => {
+    vectorTwo.forEach(v => {
         v.speed = Math.min(2, Math.max(v.speed + 0.05 * v.active, 0))
         arcX = Math.min(canvas.width - r, Math.max(arcX + v.direction[0] * v.speed, 0 + r));
         arcY = Math.min(canvas.height - r, Math.max(arcY + v.direction[1] * v.speed, 0 + r));
